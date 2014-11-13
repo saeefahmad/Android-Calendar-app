@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="1dp"
+    android:background="@color/day"
+    android:fadingEdgeLength="2dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fadingEdgeLength="2dp"
+        android:padding="@dimen/list_cell_padding"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="08dp"
+        android:textStyle="normal" />
+
+     <GridView
+        android:id="@+id/dailyEventlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       />
+
+   
+    
+
+</LinearLayout>
