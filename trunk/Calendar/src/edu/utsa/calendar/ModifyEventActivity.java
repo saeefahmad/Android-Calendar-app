@@ -141,7 +141,7 @@ public class ModifyEventActivity extends EventActivity {
 		s = constructTime(toHour, toMinute);
 		to_time.setText(s);
 
-		EditText what = (EditText) findViewById(R.id.what);
+		EditText what = (EditText) findViewById(R.id.description);
 		what.setText(description);
 
 		// construct spinner item array by getting all categories from database

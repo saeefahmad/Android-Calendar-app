@@ -70,7 +70,7 @@ public class NewEventActivity extends EventActivity {
 			@Override
 			// create event
 			public void onClick(View v) {
-				if (getData()) {
+				if (getData()) { // This is where all the user inputs are getting.
 					if (verifyData()) {
 						Calendar[] from = new Calendar[occurance];
 						Calendar[] to = new Calendar[occurance];
@@ -81,6 +81,8 @@ public class NewEventActivity extends EventActivity {
 						boolean flag = true;
 
 						// check event time conflict
+						//aaaaaaaaaaaaaaaaaaaaaaa
+						
 						for (int i = 0; i < occurance; i++) {
 							from[i] = Calendar.getInstance();
 							from[i].set(fromYear, fromMonth, fromDay, fromHour,
@@ -109,6 +111,7 @@ public class NewEventActivity extends EventActivity {
 										description, occurance, i + 1);
 								// save newly created event to database
 								categoryName = EventActivity.DEFAULT_CATEGORY;
+								//TODO 
 								manager.createEvent(e);
 							}
 

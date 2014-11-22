@@ -12,7 +12,7 @@
     <string name="title_activity_calendar">Calendar Activity</string>
     <string name="buttonNextWeekText">Next Week</string>
     <string name="buttonPreviousWeekText">Previous Week</string>
-    <string name="description">Previous Week</string>
+    <!-- string name="description">Previous Week</string-->
 
     <color name="gray">#d1d1d1</color>
     <color name="test">#F8F2E4</color>
@@ -25,7 +25,7 @@
     <string name="from">From</string>
     <string name="to">To</string>
     <string name="event_description">Event Description</string>
-    <string name="what">What</string>
+    <string name="description">Describe event</string>
     <string name="category">Category</string>
     <string name="or">OR</string>
     <string name="new_category">New Category</string>
@@ -52,5 +52,8 @@
     <string name="info">No category to delete</string>
     <string name="delete">Delete</string>
     <string name="prompt">please select category</string>
+    
+    <string name="periodical">Repeat weekly?</string>
+    <string name="weeks">How many weeks? </string>
 
 </resources>
