@@ -1,6 +1,7 @@
 package edu.utsa.calendar;
 
 import java.util.Calendar;
+
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -32,8 +33,9 @@ public class EventActivity extends Activity implements OnItemSelectedListener {
 	protected int toHour;
 	protected int toMinute;
 	protected String description;
+	protected String times;
 	protected boolean checked = false;
-	protected int occurance = 1;
+	protected int occurance = 1; //This value indicate how many events will be created
 	protected String categoryName;
 
 	protected final static String DEFAULT_CATEGORY = "default";
@@ -109,6 +111,7 @@ public class EventActivity extends Activity implements OnItemSelectedListener {
 	protected boolean getData() {
 		TextView from = (TextView) findViewById(R.id.from_date);
 		String tmp = from.getText().toString();
+		Boolean bool;
 		if (tmp == null || tmp.isEmpty())
 			return false;
 		String[] s = tmp.split("/");
@@ -156,11 +159,21 @@ public class EventActivity extends Activity implements OnItemSelectedListener {
 			toMinute = Integer.parseInt(time[1]);
 		}
 
-		EditText editText = (EditText) findViewById(R.id.what);
+		EditText editText = (EditText) findViewById(R.id.description);
 		tmp = editText.getText().toString();
 		if (tmp == null || tmp.isEmpty())
 			return false;
 		description = tmp;
+		
+		CheckBox check = (CheckBox) findViewById(R.id.periodical);
+		bool = check.isChecked();
+				
+		if (bool) {
+			occurance = 5;
+//			editText = (EditText) findViewById(R.id.times);
+//			tmp = editText.getText().toString();
+//			occurance = Integer.parseInt(tmp);
+		}
 
 		return true;
 	}
